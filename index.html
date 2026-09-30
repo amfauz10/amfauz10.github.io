@@ -3,21 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0646a1">
+<meta name="description" content="Portfolio of Fauzi Akbar Maulidan, junior web developer. Laravel, PHP, and MySQL projects with RFID, WhatsApp, and Midtrans integrations.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fauzi Akbar Maulidan | Junior Full-Stack Developer">
+<meta property="og:description" content="Laravel web apps with RFID, WhatsApp, and Midtrans integrations.">
 <title>Fauzi Akbar Maulidan | Junior Full-Stack Developer</title>
 <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{--blue:#0646a1;--paper:#EEF1F6;--card:#fff;--ink:#101828;--muted:#4F5B70;--line:#D5DBE6;--link:#0646a1;--soft:#E3EAF7;--gold:#FFB800;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+box-sizing:border-box}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0B111C;--card:#131C2B;--ink:#E8EDF5;--muted:#9AA7BC;--line:#26324A;--link:#8DB4FF;--soft:#1A2843}}
 :root[data-theme="dark"]{--paper:#0B111C;--card:#131C2B;--ink:#E8EDF5;--muted:#9AA7BC;--line:#26324A;--link:#8DB4FF;--soft:#1A2843}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 *,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 "Public Sans",system-ui,sans-serif}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 "Public Sans",system-ui,sans-serif;overflow-wrap:break-word}
 h1,h2,h3{font-family:"Familjen Grotesk","Public Sans",system-ui,sans-serif;margin:0;line-height:1.12;letter-spacing:-.01em}
 a{color:var(--link)}
 a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .in{max-width:1080px;margin:0 auto;padding:0 24px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:16px;flex-wrap:wrap}
+nav{display:flex;justify-content:space-between;align-items:center;padding:calc(20px + env(safe-area-inset-top,0px)) 0 20px;gap:16px;flex-wrap:wrap}
 nav b{font:700 18px "Familjen Grotesk",sans-serif}
 nav div{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
 nav a{color:var(--ink);text-decoration:none;font-size:15px}
@@ -30,7 +36,7 @@ nav a:hover{text-decoration:underline}
 .btn{font:500 15px "Public Sans",sans-serif;text-decoration:none;border-radius:8px;padding:11px 20px;background:var(--blue);color:#fff;border:2px solid var(--blue)}
 .btn.alt{background:transparent;color:var(--ink);border-color:var(--ink)}
 .stage{background:var(--blue);border-radius:28px;padding:44px 20px 28px;display:flex;flex-direction:column;align-items:center;gap:22px}
-.idc{position:relative;width:250px;background:#fff;color:#101828;border-radius:16px;overflow:hidden;transform:rotate(-3deg);box-shadow:0 20px 32px rgba(0,0,0,.28)}
+.idc{position:relative;width:min(250px,100%);background:#fff;color:#101828;border-radius:16px;overflow:hidden;transform:rotate(-3deg);box-shadow:0 20px 32px rgba(0,0,0,.28)}
 .idc.tap{animation:bump .45s ease}
 @keyframes bump{40%{transform:rotate(-3deg) scale(.96)}}
 .idc::before{content:"";position:absolute;top:9px;left:50%;width:46px;height:9px;margin-left:-23px;border-radius:5px;background:#c9d2e2}
@@ -76,7 +82,7 @@ ul.list li{margin-bottom:6px}
 .cert b{font-family:"Familjen Grotesk",sans-serif;color:var(--link)}
 .cert h3{font-size:17px}
 .cert p{margin:2px 0 0;color:var(--muted);font-size:14px}
-footer{background:#0A1220;color:#C9D5EA;padding:72px 0 48px}
+footer{background:#0A1220;color:#C9D5EA;padding:72px 0 calc(48px + env(safe-area-inset-bottom,0px))}
 footer h2{color:#fff;font-size:clamp(30px,4.2vw,44px);margin-bottom:12px}
 footer a{color:var(--gold);font-size:20px}
 footer p{margin:14px 0 0;font-size:15px}
@@ -86,6 +92,22 @@ footer p a{font-size:15px}
 .grid2,.certs,.sk{grid-template-columns:1fr}
 .plist{grid-template-columns:1fr}
 .sec{padding:52px 0}
+.pill{display:none}
+nav div{gap:4px 18px}
+nav a{padding:8px 0}
+.hero .cta .btn{flex:1 1 140px;text-align:center}
+.pb{padding:20px 20px 24px}
+.stage{padding:36px 16px 24px}
+.sk{gap:26px}
+}
+@media (max-width:480px){
+.in{padding:0 18px}
+.hero p{font-size:17px}
+footer a{font-size:18px}
+}
+@media (min-width:1400px){
+.in{max-width:1200px}
+.hero h1{font-size:72px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.idc.tap{animation:none}}
 @media print{
@@ -109,8 +131,8 @@ footer{padding:28px 0}
 </nav>
 <header class="hero">
 <div>
-<h1>I build web systems that connect to the real world.</h1>
-<p>I am a Junior Full-Stack Developer. I work with Laravel, and I have connected it to RFID readers, WhatsApp, and payment gateways.</p>
+<h1>Hi, I am Fauzi.</h1>
+<p>I make websites and web apps with Laravel. I built a system that reads RFID cards and sends WhatsApp messages. I also built an online store that takes payments through Midtrans.</p>
 <p>Final-year Information Systems student at UNIKOM. Open to junior developer roles and internships.</p>
 <div class="cta"><a class="btn" href="#projects">See my projects</a><a class="btn alt" href="mailto:fauzi10akbar10@gmail.com">Email me</a></div>
 </div>
@@ -209,7 +231,7 @@ footer{padding:28px 0}
 </div></section>
 
 <footer id="contact"><div class="in">
-<h2>Let's work together.</h2>
+<h2>Contact me</h2>
 <a href="mailto:fauzi10akbar10@gmail.com">fauzi10akbar10@gmail.com</a>
 <p><a href="https://linkedin.com/in/fauzi-akbar-maulidan-37b3bb29a">LinkedIn</a> &nbsp; <a href="https://github.com/amfauz10">GitHub</a> &nbsp; Kuningan, West Java, Indonesia</p>
 </div></footer>
